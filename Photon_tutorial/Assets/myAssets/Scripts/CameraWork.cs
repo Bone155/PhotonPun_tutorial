@@ -83,10 +83,10 @@ public class CameraWork : MonoBehaviour
         cameraOffset.y = height;
 
 
-        cameraTransform.position = Vector3.Lerp(cameraTransform.position, this.transform.position + this.transform.TransformVector(cameraOffset), smoothSpeed * Time.deltaTime);
+        cameraTransform.position = Vector3.Lerp(cameraTransform.position, transform.position + transform.TransformVector(cameraOffset), smoothSpeed * Time.deltaTime);
 
 
-        cameraTransform.LookAt(this.transform.position + centerOffset);
+        cameraTransform.LookAt(transform.position + centerOffset);
     }
 
     void Cut()
@@ -95,10 +95,10 @@ public class CameraWork : MonoBehaviour
         cameraOffset.y = height;
 
 
-        cameraTransform.position = this.transform.position + this.transform.TransformVector(cameraOffset);
+        cameraTransform.position = transform.position + transform.TransformVector(cameraOffset);
 
 
-        cameraTransform.LookAt(this.transform.position + centerOffset);
+        cameraTransform.LookAt(transform.position + centerOffset);
     }
 
     #endregion
